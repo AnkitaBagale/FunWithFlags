@@ -25,10 +25,10 @@ const flagLib = {
 const flags = Object.keys(flagLib);
 
 export default function App() {
-  var [country, setCountry] = useState("Country name will appear here..");
+  const [country, setCountry] = useState("Country name will appear here..");
 
   function flagInputHandler(event) {
-    var country = flagLib[event.target.value];
+    let country = flagLib[event.target.value];
     if (country === undefined) {
       country = "This flag is not present in our database";
     }
